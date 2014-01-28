@@ -13,6 +13,7 @@
 #  :small  => 150x150 pixel
 #  :medium => 306x306 pixel (default)
 #  :large  => 612x612 pixel
+#  :large2 => 640x640 pixel
 
 require 'cgi'
 require 'json'
@@ -24,7 +25,7 @@ def instagr( short_url, size = :medium)
 	
 	# img size
 	size = size.to_sym if size != :medium
-	maxwidth_data = {:small => 150, :medium => 306, :large => 612}
+	maxwidth_data = {:small => 150, :medium => 306, :large => 612, :large2 => 640}
 	maxwidth = maxwidth_data[ size ] ? maxwidth_data[ size ] : maxwidth_data[:medium]
 	
 	# proxy
